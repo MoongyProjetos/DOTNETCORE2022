@@ -1,0 +1,20 @@
+Solucao - Solution - .sln
+	Projetos - Projects - .csproj >> .dproj >> .vbproj
+		Files PlainText - .cs , .vb , xml, .json
+		.exe, .dll 
+			
+		
+
+dotnet restore  >> busca as dependências e salva com o seu projeto
+dotnet build 	>> restore + gera os binários
+dotnet run 		>> build + execute
+
+
+
+
+Classe
+Objeto
+Interface
+Enumeradores
+Operadores
+
