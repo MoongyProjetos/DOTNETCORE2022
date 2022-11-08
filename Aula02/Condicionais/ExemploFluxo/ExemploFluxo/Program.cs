@@ -52,18 +52,18 @@ switch (mary.Idade)
         break;
 }
 
-if(mary.Idade >= 0 && mary.Idade <= 11){ Console.WriteLine("Crianca"); }
+if (mary.Idade >= 0 && mary.Idade <= 11) { Console.WriteLine("Crianca"); }
 
 if (mary.Idade >= 12 && mary.Idade <= 17) { Console.WriteLine("Adolescente"); }
 
 
-if(mary.Idade >= 70 || mary.Idade >= 80)
+if (mary.Idade >= 70 || mary.Idade >= 80)
 {
 
 }
 
-var resultado = mary.Idade >= 70 ? "Dinossauro": "Crianca";
+var resultado = mary.Idade >= 70 ? "Dinossauro" : "Crianca";
 
 
-    Console.ReadLine();
+Console.ReadLine();
 
