@@ -31,5 +31,10 @@ namespace ExemploInterfaces.Classes
             var Dados = $"Numero: {NumeroAluno} - Nome: {NomeDoAluno}";
             File.WriteAllText(@"e:\temp\dadosAlunos.txt", Dados);
         }
+
+        bool IOperacoes.Exemplo()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

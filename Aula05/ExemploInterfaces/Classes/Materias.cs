@@ -14,6 +14,11 @@ namespace ExemploInterfaces.Classes
             throw new NotImplementedException();
         }
 
+        public bool Exemplo()
+        {
+            throw new NotImplementedException();
+        }
+
         public void Recuperar()
         {
             Console.WriteLine("Recuperei Materias");
@@ -22,6 +27,11 @@ namespace ExemploInterfaces.Classes
         public void Salvar()
         {
             Console.WriteLine("Escrevi Materias");
+        }
+
+        void IDesconto.Exemplo()
+        {
+            throw new NotImplementedException();
         }
     }
 }
