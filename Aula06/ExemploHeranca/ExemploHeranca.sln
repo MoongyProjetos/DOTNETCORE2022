@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExemploHeranca", "ExemploHeranca.csproj", "{EE5BF3A7-0D7D-486A-98B9-5C880D6A384F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComponentesComuns", "..\ComponentesComuns\ComponentesComuns.csproj", "{FA95CD2C-B71C-476D-ADFB-934F381762EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE5BF3A7-0D7D-486A-98B9-5C880D6A384F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE5BF3A7-0D7D-486A-98B9-5C880D6A384F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE5BF3A7-0D7D-486A-98B9-5C880D6A384F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE5BF3A7-0D7D-486A-98B9-5C880D6A384F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA95CD2C-B71C-476D-ADFB-934F381762EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA95CD2C-B71C-476D-ADFB-934F381762EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA95CD2C-B71C-476D-ADFB-934F381762EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA95CD2C-B71C-476D-ADFB-934F381762EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2BD7668E-7C87-4C25-B1C5-C4A4F97CA0EA}
+	EndGlobalSection
+EndGlobal
