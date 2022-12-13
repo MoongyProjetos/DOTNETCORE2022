@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConverterParaMaiusculas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nome" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConverterParaMaiusculasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConverterParaMaiusculasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterPessoaPorNome">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nome" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterPessoaPorNomeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObterPessoaPorNomeResult" type="tns:Pessoa" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Pessoa">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Nome" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataNascimento" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ObterNomePessoaEmMaiusculo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pessoa" type="tns:Pessoa" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterNomePessoaEmMaiusculoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObterNomePessoaEmMaiusculoResult" type="tns:Pessoa" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConverterParaMaiusculasSoapIn">
+    <wsdl:part name="parameters" element="tns:ConverterParaMaiusculas" />
+  </wsdl:message>
+  <wsdl:message name="ConverterParaMaiusculasSoapOut">
+    <wsdl:part name="parameters" element="tns:ConverterParaMaiusculasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObterPessoaPorNomeSoapIn">
+    <wsdl:part name="parameters" element="tns:ObterPessoaPorNome" />
+  </wsdl:message>
+  <wsdl:message name="ObterPessoaPorNomeSoapOut">
+    <wsdl:part name="parameters" element="tns:ObterPessoaPorNomeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObterNomePessoaEmMaiusculoSoapIn">
+    <wsdl:part name="parameters" element="tns:ObterNomePessoaEmMaiusculo" />
+  </wsdl:message>
+  <wsdl:message name="ObterNomePessoaEmMaiusculoSoapOut">
+    <wsdl:part name="parameters" element="tns:ObterNomePessoaEmMaiusculoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PessoasServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConverterParaMaiusculas">
+      <wsdl:input message="tns:ConverterParaMaiusculasSoapIn" />
+      <wsdl:output message="tns:ConverterParaMaiusculasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterPessoaPorNome">
+      <wsdl:input message="tns:ObterPessoaPorNomeSoapIn" />
+      <wsdl:output message="tns:ObterPessoaPorNomeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterNomePessoaEmMaiusculo">
+      <wsdl:input message="tns:ObterNomePessoaEmMaiusculoSoapIn" />
+      <wsdl:output message="tns:ObterNomePessoaEmMaiusculoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PessoasServiceSoap" type="tns:PessoasServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConverterParaMaiusculas">
+      <soap:operation soapAction="http://tempuri.org/ConverterParaMaiusculas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterPessoaPorNome">
+      <soap:operation soapAction="http://tempuri.org/ObterPessoaPorNome" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterNomePessoaEmMaiusculo">
+      <soap:operation soapAction="http://tempuri.org/ObterNomePessoaEmMaiusculo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PessoasServiceSoap12" type="tns:PessoasServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConverterParaMaiusculas">
+      <soap12:operation soapAction="http://tempuri.org/ConverterParaMaiusculas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterPessoaPorNome">
+      <soap12:operation soapAction="http://tempuri.org/ObterPessoaPorNome" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterNomePessoaEmMaiusculo">
+      <soap12:operation soapAction="http://tempuri.org/ObterNomePessoaEmMaiusculo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PessoasService">
+    <wsdl:port name="PessoasServiceSoap" binding="tns:PessoasServiceSoap">
+      <soap:address location="https://localhost:44399/PessoasService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PessoasServiceSoap12" binding="tns:PessoasServiceSoap12">
+      <soap12:address location="https://localhost:44399/PessoasService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
