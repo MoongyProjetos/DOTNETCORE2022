@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "305e6f66-6d56-4792-ba90-7fee3e785507",
+		"name": "PessoasCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2500871"
+	},
+	"item": [
+		{
+			"name": "ObterPessoa",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "ObterPessoa",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7196/api/pessoas?nome=joao",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7196",
+							"path": [
+								"api",
+								"pessoas"
+							],
+							"query": [
+								{
+									"key": "nome",
+									"value": "joao"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 13 Dec 2022 20:19:26 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "JOAO"
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
